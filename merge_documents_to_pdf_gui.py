@@ -10,7 +10,7 @@ import shutil
 
 class Merge_Documents_GUI(tk.Tk):
     def __init__(self):
-            super().__init__()  # Initialize the base tk.Tk class
+            super().__init__(className="Merge Documents to PDF")  # Initialize the base tk.Tk class
             self.geometry("500x400")
             self.label = ttk.Label(self, text="Merge Word Documents to PDF",wraplength=300,font=("Arial",24),justify="center")
             self.label.pack()
@@ -65,7 +65,7 @@ class Merge_Documents_GUI(tk.Tk):
 
         self.results_label.config(text=f"Converted Merged {student} Documents to PDF")
 
-        if not "input" in parent_path:
+        if not "input" in str(parent_path):
             shutil.copy2(f"output/{output_file_name}.docx", f"{parent_path}/{output_file_name}.docx")        
             shutil.copy2(f"output/{output_file_name}.pdf", f"{parent_path}/{output_file_name}.pdf")        
 
