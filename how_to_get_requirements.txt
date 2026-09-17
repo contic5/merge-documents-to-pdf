@@ -1,0 +1,2 @@
+python -m pipreqs.pipreqs /path/to/your/project
+python -m pipreqs.pipreqs .
